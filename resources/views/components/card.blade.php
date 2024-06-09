@@ -2,9 +2,9 @@
     'withBackButton' => false,
 ])
 
-<div class="flex flex-col h-screen justify-center items-center p-4">
-    <div class="min-h-60 flex flex-col bg-white border shadow-sm rounded-card overflow-y-scroll w-80 sm:w-96">
-        <div class="flex flex-auto flex-col justify-center items-center p-6">
+<div class="mx-auto w-screen p-4 sm:py-4 sm:w-96">
+    <div class="min-h-60 flex flex-col bg-white border shadow-sm rounded-card w-full">
+        <div class="flex flex-auto flex-col justify-center items-center px-4 py-6">
             <h3 class="text-5xl leading-[4rem] font-['Braveheart'] text-copper">
                 Alex & Mariska
             </h3>
@@ -15,27 +15,27 @@
             @endif
 
             {{ $slot }}
+        </div>
 
-            <p class="mt-4">
-                @if($withBackButton)
-                    <a class="inline-flex items-center gap-x-1 text-sm rounded-lg border border-transparent text-amber-600 hover:text-amber-800 disabled:opacity-50 disabled:pointer-events-none dark:text-amber-500 dark:hover:text-amber-400"
-                       href="{{ route('dashboard') }}">
-                        Terug
-                    </a>
-                    &middot;
-                @endif
-                @if(invite())
-                    <a class="inline-flex items-center gap-x-1 text-sm rounded-lg border border-transparent text-amber-600 hover:text-amber-800 disabled:opacity-50 disabled:pointer-events-none dark:text-amber-500 dark:hover:text-amber-400"
-                       href="{{ route('signout') }}">
-                        Uitloggen
-                    </a>
-                    &middot;
-                @endif
+        <div class="p-4 border-t sm:px-5 text-center">
+            @if($withBackButton)
                 <a class="inline-flex items-center gap-x-1 text-sm rounded-lg border border-transparent text-amber-600 hover:text-amber-800 disabled:opacity-50 disabled:pointer-events-none dark:text-amber-500 dark:hover:text-amber-400"
-                   href="mailto:contact@alexenmariska.wedding">
-                    Contact
+                   href="{{ route('dashboard') }}">
+                    Terug
                 </a>
-            </p>
+                &middot;
+            @endif
+            @if(invite())
+                <a class="inline-flex items-center gap-x-1 text-sm rounded-lg border border-transparent text-amber-600 hover:text-amber-800 disabled:opacity-50 disabled:pointer-events-none dark:text-amber-500 dark:hover:text-amber-400"
+                   href="{{ route('signout') }}">
+                    Uitloggen
+                </a>
+                &middot;
+            @endif
+            <a class="inline-flex items-center gap-x-1 text-sm rounded-lg border border-transparent text-amber-600 hover:text-amber-800 disabled:opacity-50 disabled:pointer-events-none dark:text-amber-500 dark:hover:text-amber-400"
+               href="mailto:contact@alexenmariska.wedding">
+                Contact
+            </a>
         </div>
     </div>
 </div>

@@ -16,7 +16,7 @@
                     </p>
                     <div class="grid space-y-2">
                         <label for="answer-yes"
-                               class="cursor-pointer max-w-xs flex p-3 w-full bg-white border border-amber-500 rounded-card focus:border-amber-500 focus:ring-amber-500">
+                               class="cursor-pointer max-w-xs flex p-3 w-full bg-white border border-amber-500 hover:border-amber-700 rounded-card focus:border-amber-500 focus:ring-amber-500">
                             <input id="answer-yes"
                                    type="radio"
                                    name="answer"
@@ -27,7 +27,7 @@
                         </label>
 
                         <label for="answer-no"
-                               class="cursor-pointer max-w-xs flex p-3 w-full bg-white border border-amber-500 rounded-card focus:border-amber-500 focus:ring-amber-500">
+                               class="cursor-pointer max-w-xs flex p-3 w-full bg-white border border-amber-500 hover:border-amber-700 rounded-card focus:border-amber-500 focus:ring-amber-500">
                             <input id="answer-no"
                                    type="radio"
                                    name="answer"
@@ -46,7 +46,7 @@
                         </p>
                         <div class="grid space-y-2">
                             <label for="food-meat"
-                                   class="cursor-pointer max-w-xs flex p-3 w-full bg-white border border-amber-500 rounded-card focus:border-amber-500 focus:ring-amber-500">
+                                   class="cursor-pointer max-w-xs flex p-3 w-full bg-white border border-amber-500 hover:border-amber-700 rounded-card focus:border-amber-500 focus:ring-amber-500">
                                 <input id="food-meat"
                                        type="radio"
                                        name="food"
@@ -57,7 +57,7 @@
                             </label>
 
                             <label for="food-fish"
-                                   class="cursor-pointer max-w-xs flex p-3 w-full bg-white border border-amber-500 rounded-card focus:border-amber-500 focus:ring-amber-500">
+                                   class="cursor-pointer max-w-xs flex p-3 w-full bg-white border border-amber-500 hover:border-amber-700 rounded-card focus:border-amber-500 focus:ring-amber-500">
                                 <input id="food-fish"
                                        type="radio"
                                        name="food"
@@ -68,7 +68,7 @@
                             </label>
 
                             <label for="food-vega"
-                                   class="cursor-pointer max-w-xs flex p-3 w-full bg-white border border-amber-500 rounded-card focus:border-amber-500 focus:ring-amber-500">
+                                   class="cursor-pointer max-w-xs flex p-3 w-full bg-white border border-amber-500 hover:border-amber-700 rounded-card focus:border-amber-500 focus:ring-amber-500">
                                 <input id="food-vega"
                                        type="radio"
                                        name="food"
@@ -105,7 +105,7 @@
                                        placeholder="{{ Str::slug($person->name) }}@example.com"
                                        class="py-3 px-4 block w-full border-gray-200 rounded-card focus:border-amber-500 focus:ring-amber-500 disabled:opacity-50 disabled:pointer-events-none">
                                 <p class="ml-4 mt-2 text-neutral-500" id="hs-input-helper-text">
-                                    We sturen je graag foto's na de bruiloft. Invullen is niet verplicht.
+                                    Zo kunnen we je aanvullende vragen stellen en foto's sturen na de bruiloft. Invullen is niet verplicht.
                                 </p>
                             </div>
                         </div>
@@ -113,7 +113,7 @@
                 </div>
 
                 <button type="submit"
-                        class="py-3 px-4 inline-flex items-center gap-x-2 rounded-card border border-amber-800 text-amber-800 hover:border-amber-500 hover:text-amber-500 disabled:opacity-50 disabled:pointer-events-none">
+                        class="py-3 px-4 inline-flex items-center gap-x-2 rounded-card border border-amber-500 text-amber-500 hover:border-amber-700 hover:text-amber-700 disabled:opacity-50 disabled:pointer-events-none">
                     <span class="mx-auto">Opslaan</span>
                 </button>
             </div>

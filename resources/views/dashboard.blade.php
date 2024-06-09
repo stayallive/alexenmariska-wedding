@@ -8,10 +8,10 @@
             Vul de RSVP in voor 1 Augustus!
         </x-slot:title>
 
-        <div class="mt-4 w-full flex flex-col gap-y-2">
+        <div class="mt-6 w-full flex flex-col gap-y-2">
             @foreach(invite()->people as $person)
                 <a href="{{ route('rsvp', $person->ulid) }}"
-                   class="block w-full py-3 px-4 text-center rounded-card border border-amber-500 text-amber-500 hover:border-amber-800 hover:text-amber-800 disabled:opacity-50 disabled:pointer-events-none dark:border-neutral-400 dark:text-neutral-400 dark:hover:text-neutral-300 dark:hover:border-neutral-300">
+                   class="block w-full py-3 px-4 text-center rounded-card border border-amber-500 text-amber-500 hover:border-amber-700 hover:text-amber-700 disabled:opacity-50 disabled:pointer-events-none">
                     @if($person->rsvp === null)
                         Invullen voor "{{ $person }}"
                     @else
@@ -29,7 +29,7 @@
             @endforeach
         </div>
 
-        <div class="mt-8 mb-4 w-full hs-accordion-group">
+        <div class="mt-8 w-full hs-accordion-group">
             <x-accordion-item title="Waar is de bruiloft?">
                 De bruiloft is in Ross Lovell aan den IJssel (<a href="https://maps.app.goo.gl/LpmVCq9D5CRPKSnB8" class="text-amber-500">Google Maps</a>). Er is ruim parkeerplek voor de deur van de locatie.
             </x-accordion-item>
