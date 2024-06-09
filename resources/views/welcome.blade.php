@@ -46,7 +46,6 @@
                                        value=""
                                        class="block size-[46px] text-center border-gray-200 rounded-md text-sm [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
                                        pattern="[0-9]*"
-                                       @if($index === 0) autofocus @endif
                                        inputmode="numeric"
                                        x-on:input="handlePinChange($event, {{ $index }})"
                                        placeholder="⚬"
