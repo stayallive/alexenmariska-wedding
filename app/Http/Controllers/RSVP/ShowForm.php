@@ -12,7 +12,7 @@ class ShowForm
         $person = invite_or_fail()->people()->where('ulid', '=', $personId)->first();
 
         if ($person === null) {
-            return redirect()->route('dashboard');
+            return redirect()->route('invite');
         }
 
         return view('rsvp', compact('person'));

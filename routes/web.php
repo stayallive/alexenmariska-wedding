@@ -14,10 +14,10 @@ Route::group([
 Route::group([
     'middleware' => [Middleware\RedirectIfNotAuthenticated::class],
 ], static function () {
-    Route::view('rsvp', 'dashboard')->name('dashboard');
+    Route::view('invite', 'invite')->name('invite');
 
-    Route::get('rsvp/{person}', Controllers\RSVP\ShowForm::class)->name('rsvp');
-    Route::post('rsvp/{person}', Controllers\RSVP\SubmitForm::class);
+    Route::get('invite/{person}/rsvp', Controllers\RSVP\ShowForm::class)->name('rsvp');
+    Route::post('invite/{person}/rsvp', Controllers\RSVP\SubmitForm::class);
 
     Route::get('signout', Controllers\SignOut::class)->name('signout');
 });

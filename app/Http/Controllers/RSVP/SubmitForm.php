@@ -18,6 +18,6 @@ class SubmitForm
         $person->email = $person->rsvp ? $request->string('email') : null;
         $person->save();
 
-        return redirect()->route('dashboard');
+        return redirect()->route('invite');
     }
 }

@@ -20,7 +20,7 @@
         <div class="p-4 border-t sm:px-5 text-center">
             @if($withBackButton)
                 <a class="inline-flex items-center gap-x-1 text-sm rounded-lg border border-transparent text-amber-600 hover:text-amber-800 disabled:opacity-50 disabled:pointer-events-none dark:text-amber-500 dark:hover:text-amber-400"
-                   href="{{ route('dashboard') }}">
+                   href="{{ route('invite') }}">
                     Terug
                 </a>
                 &middot;
