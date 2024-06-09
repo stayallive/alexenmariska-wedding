@@ -9,10 +9,13 @@ export default {
     ],
     darkMode: 'class',
     theme:    {
-        extend: {
+        extend:       {
             fontFamily: {
                 'sans': ['"Josefin Sans"', ...defaultTheme.fontFamily.sans],
             },
+        },
+        borderRadius: {
+            'card': '30px',
         },
     },
     plugins:  [

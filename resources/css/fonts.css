@@ -1,6 +1,6 @@
 @font-face {
-    font-family: "Braveheart";
-    src: url("/fonts/braveheart.ttf") format("opentype");
+    font-family: 'Braveheart';
+    src: url('/fonts/braveheart.ttf') format('opentype');
 }
 
 @font-face {

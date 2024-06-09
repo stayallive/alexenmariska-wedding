@@ -1,12 +1,12 @@
 @extends('layouts.default')
 
 @section('content')
-    <div class="min-h-60 flex flex-col bg-white border shadow-sm rounded dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70">
+    <div class="min-h-60 flex flex-col bg-white border shadow-sm rounded-card dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70">
         <div class="flex flex-auto flex-col justify-center items-center p-6">
-            <h3 class="text-5xl font-['Braveheart'] text-gray-800 dark:text-white">
+            <h3 class="text-5xl leading-[4rem] font-['Braveheart'] text-copper">
                 Alex & Mariska
             </h3>
-            <p class="mt-2 text-gray-500 dark:text-neutral-400">
+            <p class="mt-2 text-neutral-700">
                 Vul je PIN in om de RSVP in te vullen!
             </p>
 
