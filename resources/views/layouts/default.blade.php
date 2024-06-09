@@ -10,7 +10,7 @@
         @vite('resources/css/app.css')
         <style>{!! file_get_contents(resource_path('css/fonts.css')) !!}</style>
     </head>
-    <body class="h-full bg-auto bg-no-repeat bg-center" style="background-image: url('images/background.jpg'); background-size: cover">
+    <body class="h-full text-neutral-700 bg-cover bg-no-repeat bg-center" style="background-image: url('images/background.jpg')">
         <div class="container mx-auto max-w-4xl p-4">
             @yield('content')
         </div>

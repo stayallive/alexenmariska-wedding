@@ -1,7 +1,7 @@
 @extends('layouts.default')
 
 @section('content')
-    <div class="min-h-60 flex flex-col bg-white border shadow-sm rounded-card dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70">
+    <div class="min-h-60 flex flex-col bg-white border shadow-sm rounded-card">
         <div class="flex flex-auto flex-col justify-center items-center p-6">
             <h3 class="text-5xl leading-[4rem] font-['Braveheart'] text-copper">
                 Alex & Mariska
@@ -11,7 +11,7 @@
             </p>
 
             @session('error')
-            <div class="mt-2 bg-red-100 border border-red-200 text-sm text-red-800 rounded-lg p-4 dark:bg-red-800/10 dark:border-red-900 dark:text-red-500" role="alert">
+            <div class="mt-2 bg-red-100 border border-red-200 text-sm text-red-800 rounded-card p-4" role="alert">
                 {{ session('error') }}
             </div>
             @endsession
@@ -34,7 +34,7 @@
                     @foreach(range(0, 5) as $index)
                         <input type="text"
                                value=""
-                               class="block size-[46px] text-center border-gray-200 rounded-md text-sm [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
+                               class="block size-[46px] text-center border-gray-200 rounded-md text-sm [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
                                pattern="[0-9]*"
                                inputmode="numeric"
                                x-on:input="handlePinChange($event, {{ $index }})"
