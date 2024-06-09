@@ -1,0 +1,36 @@
+@font-face {
+    font-family: "Braveheart";
+    src: url("/fonts/braveheart.ttf") format("opentype");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/gf-josefin-sans/josefin-sans-v32-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Josefin Sans';
+    font-style: italic;
+    font-weight: 400;
+    src: url('/fonts/gf-josefin-sans/josefin-sans-v32-latin-italic.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/fonts/gf-josefin-sans/josefin-sans-v32-latin-700.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Josefin Sans';
+    font-style: italic;
+    font-weight: 700;
+    src: url('/fonts/gf-josefin-sans/josefin-sans-v32-latin-700italic.woff2') format('woff2');
+}
