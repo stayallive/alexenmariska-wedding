@@ -11,10 +11,16 @@ return new class extends Migration
     {
         Schema::create('invite_peoples', static function (Blueprint $table) {
             $table->id();
+            $table->ulid()->unique();
 
             $table->foreignIdFor(Invite::class, 'invite_id')->constrained()->cascadeOnUpdate()->cascadeOnDelete();
 
             $table->string('name');
+
+            $table->boolean('rsvp')->nullable();
+            $table->string('food')->nullable();
+            $table->string('diet')->nullable();
+            $table->string('email')->nullable();
 
             $table->timestamps();
         });

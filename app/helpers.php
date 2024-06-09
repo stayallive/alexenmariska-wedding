@@ -27,3 +27,12 @@ function invite_or_fail(): App\Models\Invite
 
     return $invite;
 }
+
+function bool_as_js(?bool $value): string
+{
+    if ($value === null) {
+        return '';
+    }
+
+    return $value ? 'true' : 'false';
+}

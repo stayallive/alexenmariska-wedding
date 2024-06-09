@@ -16,7 +16,7 @@ class SignIn
             if ($invite !== null) {
                 session()->put('invite_id', $invite->id);
 
-                return to_route('rsvp');
+                return to_route('dashboard');
             }
         }
 

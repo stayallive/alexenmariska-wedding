@@ -16,7 +16,7 @@ class RedirectIfAuthenticated
     public function handle(Request $request, Closure $next): Response
     {
         if (invite()) {
-            return to_route('rsvp');
+            return to_route('dashboard');
         }
 
         return $next($request);
