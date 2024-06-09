@@ -38,6 +38,10 @@
                 De bruiloft is op 24 Augustus 2024. Je wordt om 13:30 op de locatie verwacht.
             </x-accordion-item>
 
+            <x-accordion-item title="Kan ik iemand anders meenemen?">
+                Nee, we houden het graag klein. Alleen de mensen die hierboven staan genoemd zijn uitgenodigd.
+            </x-accordion-item>
+
             <x-accordion-item title="Hebben jullie cadeauwensen?">
                 Jazeker! Wij willen graag op huwelijksreis naar IJsland. We gaan daar ook met onze fotograaf foto's maken. Daar zouden we graag een bijdrage voor willen hebben.
             </x-accordion-item>
