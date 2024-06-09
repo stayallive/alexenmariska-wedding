@@ -3,7 +3,7 @@
 ])
 
 <div class="flex flex-col h-screen justify-center items-center p-4">
-    <div class="min-h-60 flex flex-col bg-white border shadow-sm rounded-card overflow-y-scroll">
+    <div class="min-h-60 flex flex-col bg-white border shadow-sm rounded-card overflow-y-scroll w-80 sm:w-96">
         <div class="flex flex-auto flex-col justify-center items-center p-6">
             <h3 class="text-5xl leading-[4rem] font-['Braveheart'] text-copper">
                 Alex & Mariska

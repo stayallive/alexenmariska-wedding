@@ -11,7 +11,7 @@
         <style>{!! file_get_contents(resource_path('css/fonts.css')) !!}</style>
     </head>
     <body class="h-screen text-neutral-700 bg-cover bg-no-repeat bg-center" style="background-image: url('{{ asset('images/background.jpg') }}')">
-        <div class="container mx-auto min-w-xl max-w-4xl">
+        <div class="container mx-auto">
             @yield('content')
         </div>
 

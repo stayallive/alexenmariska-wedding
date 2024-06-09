@@ -19,6 +19,6 @@ class Invite extends Model
 
     public function people(): HasMany
     {
-        return $this->hasMany(People::class);
+        return $this->hasMany(People::class)->orderByRaw('`rsvp` DESC NULLS FIRST')->orderBy('name');
     }
 }
