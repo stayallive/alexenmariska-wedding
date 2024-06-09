@@ -2,12 +2,15 @@
 export default {
     content: [
         './config/**/*.php',
+        'node_modules/preline/dist/*.js',
         './resources/**/*.{blade.php,html,js,vue}',
     ],
+    darkMode: 'class',
     theme:   {
         extend: {},
     },
     plugins: [
+        require('preline/plugin'),
         require('@tailwindcss/forms'),
         require('@tailwindcss/typography'),
     ],

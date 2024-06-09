@@ -10,29 +10,61 @@
         @vite('resources/css/app.css')
     </head>
     <body class="h-full bg-auto bg-no-repeat bg-center" style="background-image: url('images/background.jpg')">
-        <div class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
-            <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
+        <div class="container mx-auto p-4">
+            <div class="min-h-60 flex flex-col bg-white border shadow-sm rounded dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70">
+                <div class="flex flex-auto flex-col justify-center items-center p-6">
+                    <h3 class="text-lg font-bold text-gray-800 dark:text-white">
+                        Alex & Mariska Wedding
+                    </h3>
+                    <p class="mt-2 text-gray-500 dark:text-neutral-400">
+                        Vul je PIN in om de RSVP in te vullen!
+                    </p>
 
-            <div class="fixed inset-0 z-10 overflow-y-auto">
-                <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
-                    <div class="relative transform overflow-hidden rounded-lg bg-white px-4 pb-4 pt-5 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-sm sm:p-6">
-                        <div>
-                            <div class="mt-3 text-center sm:mt-5">
-                                <h3 class="text-xl font-semibold leading-6 text-gray-900" id="modal-title">24-08-24</h3>
-                                <div class="mt-2">
-                                    <p class="text-sm text-gray-500">Markeer de datum in je agenda!</p>
-                                    <p class="text-sm text-gray-500">Meer informatie volgt.</p>
-                                    <p class="text-sm text-gray-500">Voor vragen neem contact met ons op!</p>
-                                </div>
-                            </div>
+                    @session('error')
+                        <div class="mt-2 bg-red-100 border border-red-200 text-sm text-red-800 rounded-lg p-4 dark:bg-red-800/10 dark:border-red-900 dark:text-red-500" role="alert">
+                            {{ session('error') }}
                         </div>
-                        <div class="mt-5 sm:mt-6">
-                            <a href="mailto:contact@alexenmariska.wedding"
-                               class="inline-flex w-full justify-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Contact</a>
+                    @endsession
+
+                    <form x-ref="form" x-data="{
+                        pin: '******',
+                        async handlePinChange(e, index) {
+                            this.pin = this.pin.replaceAt(index, e.target.value.at(-1) ?? '0');
+
+                            if (this.pin.replace(/\D/g, '').length === 6) {
+                                await this.$nextTick();
+                                this.$refs.form.submit();
+                            }
+                        },
+                    }" action="{{ route('signin') }}" method="post">
+                        @csrf
+                        <input type="hidden" name="pin" x-model="pin">
+
+                        <div class="mt-4 flex space-x-3" data-hs-pin-input>
+                            @foreach(range(0, 5) as $index)
+                                <input type="text"
+                                       value=""
+                                       class="block size-[46px] text-center border-gray-200 rounded-md text-sm [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
+                                       pattern="[0-9]*"
+                                       @if($index === 0) autofocus @endif
+                                       inputmode="numeric"
+                                       x-on:input="handlePinChange($event, {{ $index }})"
+                                       placeholder="⚬"
+                                       autocomplete="off"
+                                       data-hs-pin-input-item=""
+                                >
+                            @endforeach
                         </div>
-                    </div>
+                    </form>
+
+                    <a class="mt-3 inline-flex items-center gap-x-1 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-800 disabled:opacity-50 disabled:pointer-events-none dark:text-blue-500 dark:hover:text-blue-400"
+                       href="mailto:contact@alexenmariska.wedding">
+                        Contact
+                    </a>
                 </div>
             </div>
         </div>
+
+        @vite('resources/js/app.js')
     </body>
 </html>
