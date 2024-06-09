@@ -35,7 +35,7 @@
                         @foreach(range(0, 5) as $index)
                             <input type="text"
                                    value=""
-                                   class="block size-[46px] text-center border-gray-200 rounded-md text-sm [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+                                   class="block size-[46px] text-center border-gray-200 rounded-md text-sm [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none focus:border-amber-500 focus:ring-amber-500 disabled:opacity-50 disabled:pointer-events-none"
                                    pattern="[0-9]*"
                                    inputmode="numeric"
                                    x-on:input="handlePinChange($event, {{ $index }})"
@@ -47,7 +47,7 @@
                     </div>
                 </form>
 
-                <a class="mt-4 inline-flex items-center gap-x-1 text-sm rounded-lg border border-transparent text-blue-600 hover:text-blue-800 disabled:opacity-50 disabled:pointer-events-none dark:text-blue-500 dark:hover:text-blue-400"
+                <a class="mt-4 inline-flex items-center gap-x-1 text-sm rounded-lg border border-transparent text-amber-600 hover:text-amber-800 disabled:opacity-50 disabled:pointer-events-none dark:text-amber-500 dark:hover:text-amber-400"
                    href="mailto:contact@alexenmariska.wedding">
                     Contact
                 </a>
