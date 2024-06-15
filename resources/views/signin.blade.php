@@ -3,7 +3,7 @@
 @section('content')
     <x-card>
         <x-slot:title>
-            Vul je PIN in om de RSVP in te vullen!
+            Vul je code in om de RSVP in te vullen!
         </x-slot:title>
 
         @session('error')
