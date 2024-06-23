@@ -6,11 +6,7 @@
             Vul je code in om de RSVP in te vullen!
         </x-slot:title>
 
-        @session('error')
-        <div class="mt-2 bg-red-100 border border-red-200 text-sm text-red-800 rounded-card p-4" role="alert">
-            {{ session('error') }}
-        </div>
-        @endsession
+        <x-messages />
 
         <form x-ref="form" x-data="{
                         pin: '******',

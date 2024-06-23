@@ -8,6 +8,8 @@
             Vul de RSVP in <em>voor</em> 1 augustus!
         </x-slot:title>
 
+        <x-messages />
+
         <div class="mt-6 w-full flex flex-col gap-y-2">
             @foreach(invite()->people as $person)
                 <a href="{{ route('rsvp', $person->ulid) }}"
