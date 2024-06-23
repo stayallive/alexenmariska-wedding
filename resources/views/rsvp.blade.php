@@ -1,4 +1,4 @@
-@extends('layouts.default')
+@extends('layouts.default', ['title' => 'RSVP voor ' . e($person->name)])
 
 @section('content')
     <x-card :with-back-button="true">
@@ -85,11 +85,11 @@
                                 Speciale dieetwensen?
                             </p>
                             <textarea
-                                rows="2"
-                                name="diet"
-                                class="py-3 px-4 block w-full border-gray-200 rounded-card focus:border-amber-500 focus:ring-amber-500 disabled:opacity-50 disabled:pointer-events-none"
-                                x-model="diet"
-                                placeholder="Heb je allergiën of een andere speciale dieetwensen?"
+                                    rows="2"
+                                    name="diet"
+                                    class="py-3 px-4 block w-full border-gray-200 rounded-card focus:border-amber-500 focus:ring-amber-500 disabled:opacity-50 disabled:pointer-events-none"
+                                    x-model="diet"
+                                    placeholder="Heb je allergiën of een andere speciale dieetwensen?"
                             ></textarea>
                         </div>
                     </div>
