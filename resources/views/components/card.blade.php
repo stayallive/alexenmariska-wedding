@@ -2,9 +2,9 @@
     'withBackButton' => false,
 ])
 
-<div class="w-full h-dvh overflow-y-scroll">
-    <div class="min-h-dvh flex items-center">
-        <div class="mx-auto p-4 w-full sm:py-4 sm:w-96">
+<div class="w-screen h-screen overflow-y-scroll">
+    <div class="min-h-screen flex items-center">
+        <div class="mx-auto p-4 sm:py-4 sm:w-96">
             <div class="min-h-60 flex flex-col bg-white border shadow-sm rounded-card w-full">
                 <div class="flex flex-auto flex-col justify-center items-center px-4 py-6">
                     <h3 class="text-5xl leading-[4rem] font-['Braveheart'] text-copper">
