@@ -7,6 +7,10 @@
 
         <title>Alex & Mariska Wedding</title>
 
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+
         @vite('resources/css/app.css')
         <style>{!! file_get_contents(resource_path('css/fonts.css')) !!}</style>
     </head>
