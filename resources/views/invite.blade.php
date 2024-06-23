@@ -42,7 +42,7 @@
             </x-accordion-item>
 
             <x-accordion-item title="Is er een dresscode?">
-                Ja, de dresscode is cocktail. Denk bijvoorbeeld aan een feestelijk jurkje voor vrouwen en een pak of nette broek (liever geen spijkerbroek) met overhemd voor mannen.
+                Ja, de dresscode is cocktail. Denk bijvoorbeeld aan een feestelijk jurkje voor vrouwen en een pak of nette broek (geen spijkerbroek) met overhemd voor mannen.
                 Twijfel je? Lees <a href="https://www.theperfectwedding.nl/artikelen/3895/dresscode-cocktail" class="text-amber-500" rel="noopener">hier</a> meer.
             </x-accordion-item>
 
@@ -62,7 +62,7 @@
             </x-accordion-item>
 
             <x-accordion-item title="Ik heb een andere vraag!">
-                Dat kan, mail ons op <a href="mailto:contact@alexenmariska.wedding" class="text-amber-500">contact@alexenmariska.wedding</a> dan beantwoorden we hem zo snel mogelijk!
+                Mail ons op <a href="mailto:contact@alexenmariska.wedding" class="text-amber-500">contact@alexenmariska.wedding</a> dan beantwoorden we hem zo snel mogelijk!
             </x-accordion-item>
         </div>
     </x-card>

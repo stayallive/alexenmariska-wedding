@@ -19,12 +19,8 @@
         <style>{!! file_get_contents(resource_path('css/fonts.css')) !!}</style>
     </head>
     <body class="text-neutral-700">
-        <div class="bg-cover bg-no-repeat bg-center" style="background-image: url('{{ asset('images/background.jpg') }}')">
-            <div class="h-screen overflow-y-scroll">
-                <div class="min-h-full flex justify-center items-center">
-                    @yield('content')
-                </div>
-            </div>
+        <div class="h-screen w-screen bg-cover bg-no-repeat bg-center" style="background-image: url('{{ asset('images/background.jpg') }}')">
+            @yield('content')
         </div>
 
         @vite('resources/js/app.js')
