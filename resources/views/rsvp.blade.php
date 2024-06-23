@@ -3,7 +3,9 @@
 @section('content')
     <x-card :with-back-button="true">
         <x-slot:title>
-            Hoi {{ $person }}, we hebben je er graag bij!
+            Hoi {{ $person }},
+            <br>
+            we hebben je er graag bij!
         </x-slot:title>
 
         <form x-data="{
