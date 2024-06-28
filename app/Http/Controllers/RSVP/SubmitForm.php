@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\RSVP;
 
 use App\Enums\FoodOption;
+use App\Mail\InviteUpdated;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\RedirectResponse;
 
 class SubmitForm
@@ -18,6 +20,12 @@ class SubmitForm
         $person->diet        = $person->rsvp ? $request->string('diet') : null;
         $person->email       = $person->rsvp ? $request->string('email') : null;
         $person->save();
+
+        dispatch(static function () use ($person) {
+            Mail::to('contact@alexenmariska.wedding')->send(
+                new InviteUpdated($person),
+            );
+        })->afterResponse();
 
         return redirect()->route('invite')->with('message', 'Opgeslagen! Bedankt voor het invullen!');
     }
