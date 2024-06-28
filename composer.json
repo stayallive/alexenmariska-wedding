@@ -5,16 +5,18 @@
     "type": "project",
     "require": {
         "php": "^8.3",
-        "laravel/framework": "11.10.*",
+        "laravel/framework": "11.13.*",
         "laravel/prompts": "0.1.*",
         "laravel/tinker": "2.9.*",
-        "sentry/sentry-laravel": "4.5.*",
+        "sentry/sentry-laravel": "4.6.*",
+        "symfony/http-client": "7.1.*",
+        "symfony/postmark-mailer": "7.1.*",
         "valorin/random": "0.5.*"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "3.13.*",
         "barryvdh/laravel-ide-helper": "3.0.*",
-        "friendsofphp/php-cs-fixer": "3.58.*"
+        "friendsofphp/php-cs-fixer": "3.59.*"
     },
     "replace": {
         "symfony/polyfill-php70": "*",
