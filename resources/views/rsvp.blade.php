@@ -10,7 +10,8 @@
 
         <form x-data="{
             rsvp: '{{ bool_as_js($person->rsvp) }}',
-            food: '{{ $person->food?->value }}',
+            food_entree: '{{ $person->food_entree?->value }}',
+            food_main: '{{ $person->food_main?->value }}',
             diet: '{{ $person->diet }}',
             email: '{{ $person->email }}',
         }" action="{{ route('rsvp', $person->ulid) }}" method="post" class="w-full">
@@ -48,38 +49,77 @@
                 <div x-show="rsvp === 'true'" class="flex flex-col gap-y-6 w-full">
                     <div>
                         <p class="ml-4 mb-1.5 text-neutral-700">
-                            Wat wil je eten?
+                            Wat wil je eten als voorgerecht?
                         </p>
                         <div class="grid space-y-2">
-                            <label for="food-meat"
+                            <label for="entree_food-meat"
                                    class="cursor-pointer flex p-3 w-full bg-white border border-amber-500 hover:border-amber-700 rounded-card focus:border-amber-500 focus:ring-amber-500">
-                                <input id="food-meat"
+                                <input id="entree_food-meat"
                                        type="radio"
-                                       name="food"
+                                       name="food_entree"
                                        value="meat"
-                                       x-model="food"
+                                       x-model="food_entree"
                                        class="shrink-0 mt-1 border-amber-500 rounded-full text-amber-600 focus:ring-amber-500 disabled:opacity-50 disabled:pointer-events-none">
                                 <span class="text-neutral-700 ms-3">Vlees</span>
                             </label>
 
-                            <label for="food-fish"
+                            <label for="entree_food-fish"
                                    class="cursor-pointer flex p-3 w-full bg-white border border-amber-500 hover:border-amber-700 rounded-card focus:border-amber-500 focus:ring-amber-500">
-                                <input id="food-fish"
+                                <input id="entree_food-fish"
                                        type="radio"
-                                       name="food"
+                                       name="food_entree"
                                        value="fish"
-                                       x-model="food"
+                                       x-model="food_entree"
                                        class="shrink-0 mt-1 border-amber-500 rounded-full text-amber-600 focus:ring-amber-500 disabled:opacity-50 disabled:pointer-events-none">
                                 <span class="text-neutral-700 ms-3">Vis</span>
                             </label>
 
-                            <label for="food-vega"
+                            <label for="entree_food-vega"
                                    class="cursor-pointer flex p-3 w-full bg-white border border-amber-500 hover:border-amber-700 rounded-card focus:border-amber-500 focus:ring-amber-500">
-                                <input id="food-vega"
+                                <input id="entree_food-vega"
                                        type="radio"
-                                       name="food"
+                                       name="food_entree"
                                        value="vega"
-                                       x-model="food"
+                                       x-model="food_entree"
+                                       class="shrink-0 mt-1 border-amber-500 rounded-full text-amber-600 focus:ring-amber-500 disabled:opacity-50 disabled:pointer-events-none">
+                                <span class="text-neutral-700 ms-3">Vegetarisch</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="ml-4 mb-1.5 text-neutral-700">
+                            Wat wil je eten als hoofdgerecht?
+                        </p>
+                        <div class="grid space-y-2">
+                            <label for="main_food-meat"
+                                   class="cursor-pointer flex p-3 w-full bg-white border border-amber-500 hover:border-amber-700 rounded-card focus:border-amber-500 focus:ring-amber-500">
+                                <input id="main_food-meat"
+                                       type="radio"
+                                       name="food_main"
+                                       value="meat"
+                                       x-model="food_main"
+                                       class="shrink-0 mt-1 border-amber-500 rounded-full text-amber-600 focus:ring-amber-500 disabled:opacity-50 disabled:pointer-events-none">
+                                <span class="text-neutral-700 ms-3">Vlees</span>
+                            </label>
+
+                            <label for="main_food-fish"
+                                   class="cursor-pointer flex p-3 w-full bg-white border border-amber-500 hover:border-amber-700 rounded-card focus:border-amber-500 focus:ring-amber-500">
+                                <input id="main_food-fish"
+                                       type="radio"
+                                       name="food_main"
+                                       value="fish"
+                                       x-model="food_main"
+                                       class="shrink-0 mt-1 border-amber-500 rounded-full text-amber-600 focus:ring-amber-500 disabled:opacity-50 disabled:pointer-events-none">
+                                <span class="text-neutral-700 ms-3">Vis</span>
+                            </label>
+
+                            <label for="main_food-vega"
+                                   class="cursor-pointer flex p-3 w-full bg-white border border-amber-500 hover:border-amber-700 rounded-card focus:border-amber-500 focus:ring-amber-500">
+                                <input id="main_food-vega"
+                                       type="radio"
+                                       name="food_main"
+                                       value="vega"
+                                       x-model="food_main"
                                        class="shrink-0 mt-1 border-amber-500 rounded-full text-amber-600 focus:ring-amber-500 disabled:opacity-50 disabled:pointer-events-none">
                                 <span class="text-neutral-700 ms-3">Vegetarisch</span>
                             </label>

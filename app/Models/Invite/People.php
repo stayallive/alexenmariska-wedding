@@ -14,7 +14,8 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @property int                        $invite_id
  * @property string                     $name
  * @property bool|null                  $rsvp
- * @property \App\Enums\FoodOption|null $food
+ * @property \App\Enums\FoodOption|null $food_entree
+ * @property \App\Enums\FoodOption|null $food_main
  * @property string|null                $diet
  * @property string|null                $email
  * @property \Carbon\Carbon             $created_at
@@ -29,8 +30,9 @@ class People extends Model
     protected function casts(): array
     {
         return [
-            'rsvp' => 'boolean',
-            'food' => FoodOption::class,
+            'rsvp'        => 'boolean',
+            'food_entree' => FoodOption::class,
+            'food_main'   => FoodOption::class,
         ];
     }
 
