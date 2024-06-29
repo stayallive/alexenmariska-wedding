@@ -1,6 +1,8 @@
 <x-mail::message>
 # RSVP van {{ $person }}
 
+Omschrijving van de invite: "{{ $person->invite->comment }}"
+
 <x-mail::table>
 | Veld         | Waarde                               |
 |:------------ |:------------------------------------ |
