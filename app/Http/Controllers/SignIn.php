@@ -14,6 +14,8 @@ class SignIn
             $invite = Invite::query()->where('pin_code', $request->string('pin'))->first();
 
             if ($invite !== null) {
+                $invite->touch();
+
                 session()->put('invite_id', $invite->id);
 
                 return to_route('invite');
