@@ -12,7 +12,10 @@ Route::group([
 });
 
 Route::group([
-    'middleware' => [Middleware\RedirectIfNotAuthenticated::class],
+    'middleware' => [
+        Middleware\RedirectIfNotAuthenticated::class,
+        Middleware\SentryUserContext::class,
+    ],
 ], static function () {
     Route::view('invite', 'invite')->name('invite');
 
